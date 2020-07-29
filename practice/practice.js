@@ -30,7 +30,7 @@ let app = http.createServer(function(request,response){
                     let title = queryData.id;
                     let sanitizedTitle = sanitizeHtml(title);
                     let sanitizedDescription = sanitizeHtml(description,{
-                        allowedTags:['h1'];
+                        allowedTags:['h1']
                     });
                     let list = template.list(fileList);
                     let html = template.HTML(title, list,
