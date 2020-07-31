@@ -1,4 +1,3 @@
 # Project exclude paths
 /node_modules/
 /practice/data
-./package-lock.json
