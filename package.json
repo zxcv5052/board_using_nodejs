@@ -3,20 +3,27 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+
+    "start": "node ./bin/www",
+    "nodemon_start": "nodemon ./bin/www",
+    "test": "mocha"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "create-react-app": "^3.4.1",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "mocha": "^8.1.0",
     "morgan": "~1.9.1",
     "pm2": "^4.4.0",
     "pug": "2.0.0-beta11",
     "sanitize-html": "^1.27.1"
   },
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zxcv5052/board_using_nodejs.git"
