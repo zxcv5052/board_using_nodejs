@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import Board from "./components/Board";
-const boards = [
+const boards =
+[
     {
     'id' :  1,
     'title' : 'board1',
@@ -16,14 +17,15 @@ const boards = [
     'register' : 'kyeong',
     'regDate' : '2020-08-25',
     'readCnt' : '1'
-    }];
+    }
+];
 class App extends Component {
     render() {
         return(
             <div>
                 {
                     boards.map( c => {
-                        return( 
+                        return(
                             <Board
                                 key={c.id}
                                 id={c.id}
