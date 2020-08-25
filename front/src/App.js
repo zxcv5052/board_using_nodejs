@@ -1,41 +1,41 @@
 import React,{ Component } from 'react';
-import PhoneForm from './PhoneForm.js'
-import PhoneInfoList from "./PhoneInfoList";
+import Board from "./components/Board";
+const boards = [
+    {
+    'id' :  1,
+    'title' : 'board1',
+    'contents' : 'it is board',
+    'register' : 'kyeong',
+    'regDate' : '2020-08-25',
+    'readCnt' : '1'
+    },
+    {
+    'id' :  2,
+    'title' : 'board2',
+    'contents' : 'it is board2',
+    'register' : 'kyeong',
+    'regDate' : '2020-08-25',
+    'readCnt' : '1'
+    }];
 class App extends Component {
-    id = 0;
-    state = {
-        information:[
-        ]
-    }
-    handleCreate = (data) => {
-        const { information } = this.state;
-        this.setState({
-            information: information.concat(
-                {
-                    id: this.id++,
-                    ...data
-                }
-                )
-        })
-    }
-    handleRemove = (id) => {
-        const { information } = this.state;
-        this.setState({
-            information: information.filter(info => info.id !== id)
-        })
-    }
     render() {
-        const { information } = this.state;
-
-        return (
+        return(
             <div>
-                <PhoneForm
-                    onCreate={this.handleCreate}
-                />
-                <PhoneInfoList
-                    data={this.state.information}
-                    onRemove={this.handleRemove}
-                />
+                {
+                    boards.map( c => {
+                        return( 
+                            <Board
+                                key={c.id}
+                                id={c.id}
+                                title={c.title}
+                                contents={c.contents}
+                                register={c.register}
+                                regDate={c.regDate}
+                                readCnt={c.readCnt}
+                                />
+                        )
+                    })
+                }
             </div>
         );
     }

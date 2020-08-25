@@ -16,7 +16,6 @@ class PhoneInfoList extends Component{
                 onRemove={onRemove}
             />)
 
-
         );
         return (
             <div>
