@@ -18,7 +18,7 @@
     "mocha": "^8.1.0",
     "morgan": "~1.9.1",
     "pm2": "^4.4.0",
-    "pug": "2.0.0-beta11",
+    "pug": "3.0.1",
     "sanitize-html": "^1.27.1"
   },
   "main": "app.js",
